@@ -24,7 +24,6 @@ cmd_opt.add_argument('-embedding_dim', type=int, default=64, help='dimension of 
 cmd_opt.add_argument('-num_class', type=int, default=0, help='#classes')
 cmd_opt.add_argument('-num_epochs', type=int, default=500, help='number of epochs')
 cmd_opt.add_argument('-rnn_hidden_dim', type=int, default=64, help='dimension of rnn hidden dimension')
-cmd_opt.add_argument('-latent_dim', type=int, default=64, help='dimension of latent layers')
 cmd_opt.add_argument('-hidden', type=int, default=64, help='dimension of regression')
 cmd_opt.add_argument('-learning_rate', type=float, default=0.0001, help='init learning_rate')
 
