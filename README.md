@@ -4,7 +4,25 @@ Codes for the paper "Learning Graph-Level Representations with Gated Recurrent N
 # 1. Setup
 
 Get the source code,
-    git clone 
+
+    git clone https://github.com/yuj-umd/graphRNN.git
+
+Install pytorch from https://pytorch.org/
+
+# 2. Usage
+
+Run
+
+    python main.py
+
+Paramaters are
+
+    data: MUTAG, 
+    feat_dim: Number of node labels.
+    embedding_dim: Dimension of node embedding
+    num_class: Number of graph classes
+    rnn_hidden_dim: Hidden unit size of RNN
+    learning_rate: initial learning_rate
 
 
 
