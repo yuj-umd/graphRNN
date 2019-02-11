@@ -13,12 +13,20 @@ Install pytorch from https://pytorch.org/
 
 Run
 
-    python main.py
+    python main.py \
+        -seed 1 \
+		-data $data \
+		-learning_rate $learning_rate \
+		-num_epochs $num_epochs \
+		-hidden $hidden \
+		-fold $fold \
+		-embedding_dim $embedding_dim \
+		-rnn_hidden_dim $rnn_hidden_dim 
 
-Paramaters are
+Paramaters are defined as
 
     data: MUTAG, NCI1, NCI109, DD, ENZYMES
-    feat_dim: Number of node labels.
+    feat_dim: Number of node labels
     embedding_dim: Dimension of node embedding
     num_class: Number of graph classes
     rnn_hidden_dim: Hidden unit size of RNN
