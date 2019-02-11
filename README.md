@@ -17,7 +17,7 @@ Run
 
 Paramaters are
 
-    data: MUTAG, 
+    data: MUTAG, NCI1, NCI109, DD, ENZYMES
     feat_dim: Number of node labels.
     embedding_dim: Dimension of node embedding
     num_class: Number of graph classes
@@ -26,7 +26,7 @@ Paramaters are
 
 
 
-# Reference
+# 3. Reference
     @article{jin2018learning,
         title={Learning Graph-Level Representations with Gated Recurrent Neural Networks},
         author={Jin, Yu and JaJa, Joseph F},
