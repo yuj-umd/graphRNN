@@ -14,7 +14,7 @@ Install pytorch from https://pytorch.org/
 Run
 
     python main.py \
-        -seed 1 \
+       		-seed 1 \
 		-data $data \
 		-learning_rate $learning_rate \
 		-num_epochs $num_epochs \
