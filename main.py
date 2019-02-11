@@ -18,7 +18,6 @@ import time
 cmd_opt = argparse.ArgumentParser(description='Argparser for graph_classification')
 cmd_opt.add_argument('-data', default='MUTAG', help='data folder name')
 cmd_opt.add_argument('-fold', type=int, default=1, help='fold (1..10)')
-cmd_opt.add_argument('-batch_size', type=int, default=1, help='minibatch size')
 cmd_opt.add_argument('-seed', type=int, default=1, help='seed')
 cmd_opt.add_argument('-feat_dim', type=int, default=0, help='dimension of node feature')
 cmd_opt.add_argument('-embedding_dim', type=int, default=64, help='dimension of node embedding')
@@ -162,7 +161,8 @@ class LSTMClassifier(nn.Module):
         for weight in self.parameters():
             weight.data.uniform_(-stdv, stdv)
 
-def loop_dataset(g_list, classifier, sample_idxes, optimizer=None, bsize=cmd_args.batch_size):
+def loop_dataset(g_list, classifier, sample_idxes, optimizer=None):
+    bsize = 1
     total_loss = []
     total_iters = (len(sample_idxes) + (bsize - 1) * (optimizer is None)) // bsize
     pbar = tqdm(range(total_iters), unit='batch')
